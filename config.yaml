@@ -1,0 +1,45 @@
+SETTINGS:
+  THREADS: 1
+  ATTEMPTS: 5
+  SHUFFLE_WALLETS: true
+  ACCOUNTS_RANGE:
+  - 0
+  - 0
+  EXACT_ACCOUNTS_TO_USE: []
+  PAUSE_BETWEEN_ATTEMPTS:
+  - 2
+  - 3
+  PAUSE_BETWEEN_SWAPS:
+  - 1
+  - 3
+  RANDOM_PAUSE_BETWEEN_ACCOUNTS:
+  - 1
+  - 3
+  RANDOM_PAUSE_BETWEEN_ACTIONS:
+  - 1
+  - 3
+  RANDOM_INITIALIZATION_PAUSE:
+  - 5
+  - 30
+  SEND_TELEGRAM_LOGS: false
+  TELEGRAM_BOT_TOKEN: 12317283:lskjalsdfasdfasd-sdfadfasd
+  TELEGRAM_USERS_IDS:
+  - '235123432'
+FLOW:
+  SKIP_FAILED_TASKS: false
+HUB_0G_SWAPS:
+  BALANCE_PERCENT_TO_SWAP:
+  - 5
+  - 10
+  NUMBER_OF_SWAPS:
+  - 1
+  - 3
+CAPTCHA:
+  NOCAPTCHA_API_KEY: "4d582279-a8fe-4ec3-888f-72a7f141d6b6"
+RPCS:
+  ZEROG:
+  - https://evmrpc-testnet.0g.ai
+  - https://lightnode-json-rpc-0g.grandvalleys.com
+OTHERS:
+  SKIP_SSL_VERIFICATION: true
+  USE_PROXY_FOR_RPC: false
