@@ -1,45 +1,78 @@
+# --------------------------- #
+# SETTINGS SECTION
+# --------------------------- #
 SETTINGS:
-  THREADS: 1
-  ATTEMPTS: 5
-  SHUFFLE_WALLETS: true
-  ACCOUNTS_RANGE:
-  - 0
-  - 0
-  EXACT_ACCOUNTS_TO_USE: []
-  PAUSE_BETWEEN_ATTEMPTS:
-  - 2
-  - 3
-  PAUSE_BETWEEN_SWAPS:
-  - 1
-  - 3
-  RANDOM_PAUSE_BETWEEN_ACCOUNTS:
-  - 1
-  - 3
-  RANDOM_PAUSE_BETWEEN_ACTIONS:
-  - 1
-  - 3
-  RANDOM_INITIALIZATION_PAUSE:
-  - 5
-  - 30
-  SEND_TELEGRAM_LOGS: false
-  TELEGRAM_BOT_TOKEN: 12317283:lskjalsdfasdfasd-sdfadfasd
-  TELEGRAM_USERS_IDS:
-  - '235123432'
+    # number of concurrent threads
+    THREADS: 1
+
+    # number of retries for ANY action
+    ATTEMPTS: 5
+    
+    # account range.
+    # BY DEFAULT: [0, 0] - all accounts
+    # [3, 5] - only 3 4 5 accounts
+    # [7, 7] - only 7 account
+    ACCOUNTS_RANGE: [0, 0]
+    
+    # WORKS ONLY IF ACCOUNTS_RANGE IS [0, 0]
+    # exact accounts to use.
+    # BY DEFAULT: [] - all accounts
+    # Example: [1, 4, 6] - bot will use only 1, 4 and 6 accounts
+    EXACT_ACCOUNTS_TO_USE: []
+    
+    SHUFFLE_WALLETS: true
+
+    # pause between attempts
+    PAUSE_BETWEEN_ATTEMPTS: [1, 10]
+    
+    # pause between swaps
+    PAUSE_BETWEEN_SWAPS: [1, 10]
+    
+    # pause in seconds between accounts
+    RANDOM_PAUSE_BETWEEN_ACCOUNTS: [1, 10]
+    
+    # pause in seconds between actions
+    RANDOM_PAUSE_BETWEEN_ACTIONS: [1, 10]
+    
+    # random pause before start of every account
+    # to make sure that all accounts will be started at different times
+    RANDOM_INITIALIZATION_PAUSE: [5, 30]
+    
+    # if true, bot will send logs to telegram
+    SEND_TELEGRAM_LOGS: false
+    # telegram bot token
+    TELEGRAM_BOT_TOKEN: "12317283:lskjalsdfasdfasd-sdfadfasd"
+    # telegram users ids
+    TELEGRAM_USERS_IDS: [235123432]
+
+    # wait for transaction confirmation in seconds
+    WAIT_FOR_TRANSACTION_CONFIRMATION_IN_SECONDS: 120
+
 FLOW:
-  SKIP_FAILED_TASKS: false
+    # if task from database failed, bot will skip it
+    # if false, bot will stop and show error
+    SKIP_FAILED_TASKS: false
+
+
+
 HUB_0G_SWAPS:
-  BALANCE_PERCENT_TO_SWAP:
-  - 5
-  - 10
-  NUMBER_OF_SWAPS:
-  - 1
-  - 3
-CAPTCHA:
-  NOCAPTCHA_API_KEY: "4d582279-a8fe-4ec3-888f-72a7f141d6b6"
+    # percent of balance to swap
+    BALANCE_PERCENT_TO_SWAP: [5, 10]
+    # random number of swaps
+    NUMBER_OF_SWAPS: [1, 3]
+
+
 RPCS:
-  ZEROG:
-  - https://evmrpc-testnet.0g.ai
-  - https://lightnode-json-rpc-0g.grandvalleys.com
+    ZEROG: ["https://evmrpc-testnet.0g.ai/"]
+
+
+CAPTCHA:
+    # nocaptcha.io/register?c=SWVtru
+    # API KEY for faucet
+    NOCAPTCHA_API_KEY: "4d582279-a8fe-4ec3-888f-72a7f141d6b6"
+
+
 OTHERS:
-  SKIP_SSL_VERIFICATION: true
-  USE_PROXY_FOR_RPC: false
+    SKIP_SSL_VERIFICATION: true
+    USE_PROXY_FOR_RPC: true
+  
