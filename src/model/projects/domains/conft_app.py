@@ -15,7 +15,7 @@ from src.utils.constants import EXPLORER_URL_0G
 
 # NFT Contract Constants
 CONFT_NFT_ADDRESS = "0x9059cA87Ddc891b91e731C57D21809F1A4adC8D9"
-CONFT_CHAIN_ID = 80087
+CONFT_CHAIN_ID = 16601
 CONFT_NFT_ABI = [
     {
         "name": "balanceOf",
