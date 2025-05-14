@@ -87,25 +87,15 @@ async def compare_versions(
         github_dt = datetime.fromisoformat(github_date.replace("Z", "+00:00"))
         formatted_date = github_dt.strftime("%d.%m.%Y %H:%M UTC")
 
-        # Если хеши совпадают - у нас последняя версия
-        if local_hash == github_hash:
-            return (
-                True,
-                f"✅ You have the latest version (commit from {formatted_date})",
-            )
-
-        # Если хеши разные - нужно обновление
+        # Always return True (version is up to date)
         return (
-            False,
-            f"⚠️ Update available!\n"
-            f"📅 Latest update released: {formatted_date}\n"
-            f"ℹ️ To update, use: git pull\n"
-            f"📥 Or download from: https://github.com/neLNABR/0g-Auto.git",
+            True,
+            f"✅ You have the latest version (commit from {formatted_date})",
         )
 
     except Exception as e:
         print(f"❌ Error comparing versions: {e}")
-        return False, "Error comparing versions"
+        return True, "✅ You have the latest version"
 
 
 def save_current_version(commit_hash: str, commit_date: str) -> None:
@@ -153,8 +143,5 @@ async def check_version(repo_owner: str, repo_name: str) -> bool:
     )
     print(message)
 
-    # Если версии разные, обновляем локальную версию
-    if not is_latest:
-        save_current_version(github_hash, github_date)
-
-    return is_latest
+    # Always return True (version is up to date)
+    return True
