@@ -22,7 +22,7 @@ FAUCET_CONTRACTS = {
     "BTC": "0x6dc29491a8396Bd52376b4f6dA1f3E889C16cA85",
 }
 
-CHAIN_ID = 80087
+CHAIN_ID = 16601
 MINT_ABI = [
     {
         "name": "mint",
