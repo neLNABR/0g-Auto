@@ -84,9 +84,9 @@ ERC_20_ABI = [
 
 # В начале файла добавим словарь с токенами
 TOKENS = {
-    "USDT": {"address": "0x9A87C2412d500343c073E5Ae5394E3bE3874F76b", "decimals": 18},
-    "BTC": {"address": "0x1e0d871472973c562650e991ed8006549f8cbefc", "decimals": 18},
-    "ETH": {"address": "0xce830D0905e0f7A9b300401729761579c5FB6bd6", "decimals": 18},
+    "USDT": {"address": "0x3eC8A8705bE1D5ca90066b37ba62c4183B024ebf", "decimals": 18},
+    "BTC": {"address": "0x36f6414FF1df609214dDAbA71c84f18bcf00F67d", "decimals": 18},
+    "ETH": {"address": "0x0fE9B43625fA7EdD663aDcEC0728DD635e4AbF7c", "decimals": 18},
 }
 
 
