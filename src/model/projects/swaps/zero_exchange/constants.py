@@ -1,7 +1,7 @@
 TOKENS = {
-    "USDT": {"address": "0xA8F030218d7c26869CADd46C5F10129E635cD565", "decimals": 18},
-    "BTC": {"address": "0x6dc29491a8396Bd52376b4f6dA1f3E889C16cA85", "decimals": 18},
-    "ETH": {"address": "0x2619090fcfDB99a8CCF51c76C9467F7375040eeb", "decimals": 18},
+    "USDT": {"address": "0x3eC8A8705bE1D5ca90066b37ba62c4183B024ebf", "decimals": 18},
+    "BTC": {"address": "0x36f6414FF1df609214dDAbA71c84f18bcf00F67d", "decimals": 18},
+    "ETH": {"address": "0x0fE9B43625fA7EdD663aDcEC0728DD635e4AbF7c", "decimals": 18},
 }
 
 CHAIN_ID = 16601
